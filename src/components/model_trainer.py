@@ -16,7 +16,7 @@ from src.utils import save_object, evaluate_models
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join("artifcats", "model.pkl")
+    trained_model_file_path:str = os.path.join("artifacts", "model.pkl")
 
 
 class ModelTrainer:
@@ -38,6 +38,7 @@ class ModelTrainer:
             "XGBRegressor": XGBRegressor(),
             "AdaBoost Regressor": AdaBoostRegressor(),
             }
+
 
             model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
                                             models=models)

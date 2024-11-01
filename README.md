@@ -1,1 +1,3 @@
 # mlproject
+
+AWS_DEPLOYMENT_TEST
